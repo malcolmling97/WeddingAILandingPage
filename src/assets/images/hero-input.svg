@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <rect width="900" height="1200" fill="#EFE3D0"/>
+  <rect width="900" height="48" fill="#E2D2B8"/>
+  <ellipse cx="648" cy="528" rx="144" ry="336.00000000000006" fill="#F9F3E6" stroke="#C9B48E" stroke-width="9.6"/>
+  <g transform="translate(648 720) scale(0.9 0.9)" fill="#4A3B2A" opacity="0.45">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g>
+  <path d="M 54 0 q 45 600 0 1200 L 0 1200 L 0 0 Z" fill="#D7A7B4"/>
+  <path d="M 117 0 q 36 600 0 1200" stroke="#C793A2" stroke-width="18" fill="none"/>
+  <g transform="translate(378 983.9999999999999) scale(1.6 1.6)" fill="#4A3B2A" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g>
+  <rect x="27" y="1080" width="180" height="66" rx="33.6" fill="#221D16" opacity="0.75"/>
+  <circle cx="76.5" cy="1113" r="14.4" fill="#fff"/>
+  <rect x="108" y="1101.6000000000001" width="81" height="22.8" rx="10.799999999999999" fill="#fff" opacity="0.8"/><text x="886" y="1186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#221D16" opacity="0.35">sample</text></svg>

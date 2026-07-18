@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <rect width="800" height="1200" fill="#FAF4E9"/>
+  <ellipse cx="400" cy="1044" rx="224.00000000000003" ry="21.599999999999998" fill="#E5D9C4"/>
+  <g transform="translate(400 624) scale(2.727272727272727)" fill="#B9A98C">
+    <path d="M -29 -160
+             C -32 -130, -19 -110, -17 -90
+             C -25 -50, -36.800000000000004 30, -46 110
+             C -25.3 124, 25.3 124, 46 110
+             C 36.800000000000004 30, 25 -50, 17 -90
+             C 19 -110, 32 -130, 29 -160
+             C 11.600000000000001 -170, -11.600000000000001 -170, -29 -160 Z"/>
+    <path d="M 8.5 -100 C 23 -30, 30.360000000000003 40, 27.599999999999998 106 L 17.48 112 C 20.7 40, 20.4 -40, 1.7000000000000002 -96 Z" opacity="0.35" fill="#fff"/>
+    <line x1="-20.299999999999997" y1="-163" x2="-11.600000000000001" y2="-192" stroke="#B9A98C" stroke-width="3.5"/>
+    <line x1="20.299999999999997" y1="-163" x2="11.600000000000001" y2="-192" stroke="#B9A98C" stroke-width="3.5"/>
+    <path d="M -11.600000000000001 -192 Q 0 -212 11.600000000000001 -192" stroke="#B9A98C" stroke-width="4" fill="none"/>
+    <line x1="0" y1="-207" x2="0" y2="-222" stroke="#B9A98C" stroke-width="3.5"/>
+    <circle cx="0" cy="-228" r="6" fill="none" stroke="#B9A98C" stroke-width="3.5"/>
+  </g><text x="786" y="1186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="19" fill="#221D16" opacity="0.35">sample</text></svg>

@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import { copy } from '../../content/copy';
+import { images } from '../../content/images';
+import RibbonLine from '../shared/RibbonLine.astro';
+import DestinationChip from '../shared/DestinationChip.astro';
+---
+
+<section class="section gallery" id="gallery" data-gallery>
+  <div class="section-inner">
+    <div class="header">
+      <h2>{copy.gallery.header}</h2>
+      <RibbonLine variant="underline" class="underline" />
+    </div>
+    <div class="masonry">
+      {
+        images.gallery.map((item) => (
+          <figure class="card shot">
+            <Image src={item.src} alt={item.alt} loading="lazy" widths={[480, 960]} sizes="(min-width: 900px) 360px, 45vw" />
+            <DestinationChip label={item.tag} class="shot-chip" />
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .header {
+    max-width: fit-content;
+  }
+
+  .underline {
+    width: min(100%, 24rem);
+    margin-top: var(--space-1);
+  }
+
+  .masonry {
+    columns: 2;
+    column-gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .shot {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-3);
+    break-inside: avoid;
+  }
+
+  .shot :global(.shot-chip) {
+    position: absolute;
+    bottom: var(--space-1);
+    left: var(--space-1);
+  }
+
+  @media (min-width: 900px) {
+    .masonry {
+      columns: 3;
+    }
+  }
+</style>

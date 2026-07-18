@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets';
+import { copy } from '../../content/copy';
+import { images } from '../../content/images';
+import RibbonLine from '../shared/RibbonLine.astro';
+---
+
+<link rel="preload" as="image" href={images.hero.input.src.src} />
+
+<section class="section hero" id="hero">
+  <div class="section-inner hero-grid">
+    <div class="headline">
+      <h1>{copy.hero.h1}</h1>
+      <p class="sub">{copy.hero.sub}</p>
+      <div class="actions">
+        <a href="#contact" class="btn-primary" data-event="cta_click" data-event-loc="hero">{copy.hero.cta}</a>
+        <a href="#how" class="secondary">{copy.hero.secondary}</a>
+      </div>
+    </div>
+
+    <div class="proof">
+      <figure class="input-card card">
+        <Image
+          src={images.hero.input.src}
+          alt={images.hero.input.alt}
+          loading="eager"
+          fetchpriority="high"
+          widths={[450, 900]}
+          sizes="(min-width: 900px) 320px, 60vw"
+        />
+      </figure>
+
+      <div class="arrow">
+        <RibbonLine variant="hero-arrow" />
+        <span class="annotation">{copy.hero.annotation}</span>
+      </div>
+
+      <div class="renders">
+        {
+          images.hero.renders.map((render, i) => (
+            <figure class="render-card card" style={`--tilt: ${render.tilt}deg; --d: ${i * 120}ms;`} data-reveal>
+              <Image src={render.src} alt={render.alt} loading="eager" widths={[450, 900]} sizes="(min-width: 900px) 260px, 50vw" />
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-top: var(--space-5);
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .sub {
+    font-size: var(--step-1);
+    margin-top: var(--space-2);
+    max-width: 34ch;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .secondary {
+    font-weight: 600;
+  }
+
+  .proof {
+    display: grid;
+    grid-template-columns: 1fr auto 1.1fr;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .input-card,
+  .render-card {
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  .input-card {
+    --tilt: -1.5deg;
+  }
+
+  .arrow {
+    width: clamp(60px, 10vw, 120px);
+    text-align: center;
+  }
+
+  .arrow .annotation {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  .renders {
+    display: grid;
+  }
+
+  .renders > * {
+    grid-area: 1 / 1;
+  }
+
+  .renders .render-card:nth-child(2) {
+    translate: 8% 6%;
+  }
+
+  .renders .render-card:nth-child(3) {
+    translate: -6% 12%;
+  }
+
+  @media (min-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+    }
+  }
+</style>

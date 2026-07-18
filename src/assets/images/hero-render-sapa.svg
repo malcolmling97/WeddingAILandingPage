@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF2EE"/>
+      <stop offset="1" stop-color="#B9D2C8"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#mist)"/>
+  <path d="M 0 660 L 270 360 L 495.00000000000006 624 L 702 408.00000000000006 L 900 600 V 1200 H 0 Z" fill="#8FB5A6" opacity="0.55"/>
+  <path d="M 0 816.0000000000001 L 198 600 L 432 792 L 648 576 L 900 768 V 1200 H 0 Z" fill="#5F8F7D" opacity="0.75"/>
+  <path d="M 0 983.9999999999999 L 315 768 L 558 960 L 900 816.0000000000001 V 1200 H 0 Z" fill="#3E7C6F"/>
+  <rect y="504" width="900" height="60" fill="#EAF2EE" opacity="0.5"/>
+  <rect y="696" width="900" height="48" fill="#EAF2EE" opacity="0.4"/>
+  <g transform="translate(378 1116) scale(1.4 1.4)" fill="#24423A" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g><text x="886" y="1186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="21" fill="#221D16" opacity="0.35">sample</text></svg>

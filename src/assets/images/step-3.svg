@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#FBF6EE"/>
+  
+  <g transform="rotate(-6 336.00000000000006 468)">
+    <rect x="156.00000000000006" y="126.00000000000001" width="360" height="684" rx="18" fill="#fff"/>
+    <svg x="174.00000000000006" y="144" width="324" height="648">
+  <defs>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF2EE"/>
+      <stop offset="1" stop-color="#B9D2C8"/>
+    </linearGradient>
+  </defs>
+  <rect width="324" height="648" fill="url(#mist)"/>
+  <path d="M 0 356.40000000000003 L 97.2 194.4 L 178.20000000000002 336.96000000000004 L 252.72 220.32000000000002 L 324 324 V 648 H 0 Z" fill="#8FB5A6" opacity="0.55"/>
+  <path d="M 0 440.64000000000004 L 71.28 324 L 155.51999999999998 427.68 L 233.28 311.03999999999996 L 324 414.72 V 648 H 0 Z" fill="#5F8F7D" opacity="0.75"/>
+  <path d="M 0 531.36 L 113.39999999999999 414.72 L 200.88 518.4 L 324 440.64000000000004 V 648 H 0 Z" fill="#3E7C6F"/>
+  <rect y="272.15999999999997" width="324" height="32.4" fill="#EAF2EE" opacity="0.5"/>
+  <rect y="375.84" width="324" height="25.92" fill="#EAF2EE" opacity="0.4"/>
+  <g transform="translate(136.07999999999998 602.64) scale(0.756 0.756)" fill="#24423A" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g></svg>
+  </g>
+  
+  <g transform="rotate(6 864 468)">
+    <rect x="684" y="126.00000000000001" width="360" height="684" rx="18" fill="#fff"/>
+    <svg x="702" y="144" width="324" height="648">
+  <defs>
+    <linearGradient id="hall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E241B"/>
+      <stop offset="1" stop-color="#5C4630"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E5335"/>
+      <stop offset="1" stop-color="#3A2C1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="324" height="479.52" fill="url(#hall)"/>
+  <rect x="16.2" width="14.58" height="479.52" fill="#241C13"/>
+  <rect x="293.22" width="14.58" height="479.52" fill="#241C13"/>
+  <path d="M 90.72000000000001 64.8 q 71.28 77.75999999999999 142.56 0" stroke="#E9C87A" stroke-width="3.24" fill="none" opacity="0.9"/>
+  <circle cx="162" cy="64.8" r="7.776" fill="#F3DFA8"/>
+  <line x1="110.16000000000001" y1="84.24000000000001" x2="110.16000000000001" y2="116.64000000000001" stroke="#E9C87A" stroke-width="2.592" opacity="0.9"/><circle cx="110.16000000000001" cy="116.64000000000001" r="4.5360000000000005" fill="#F3DFA8"/>
+  <line x1="136.07999999999998" y1="100.44" x2="136.07999999999998" y2="145.8" stroke="#E9C87A" stroke-width="2.592" opacity="0.9"/><circle cx="136.07999999999998" cy="145.8" r="4.5360000000000005" fill="#F3DFA8"/>
+  <line x1="162" y1="105.62400000000001" x2="162" y2="157.464" stroke="#E9C87A" stroke-width="2.592" opacity="0.9"/><circle cx="162" cy="157.464" r="4.5360000000000005" fill="#F3DFA8"/>
+  <line x1="187.92" y1="100.44" x2="187.92" y2="145.8" stroke="#E9C87A" stroke-width="2.592" opacity="0.9"/><circle cx="187.92" cy="145.8" r="4.5360000000000005" fill="#F3DFA8"/>
+  <line x1="213.84" y1="84.24000000000001" x2="213.84" y2="116.64000000000001" stroke="#E9C87A" stroke-width="2.592" opacity="0.9"/><circle cx="213.84" cy="116.64000000000001" r="4.5360000000000005" fill="#F3DFA8"/>
+  <rect y="479.52" width="324" height="168.48000000000002" fill="url(#floor)"/>
+  <ellipse cx="162" cy="531.36" rx="97.2" ry="19.439999999999998" fill="#E9C87A" opacity="0.12"/>
+  <g transform="translate(162 511.91999999999996) scale(0.81 0.81)" fill="#171009" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g></svg>
+  </g>
+  
+  <g transform="rotate(0 600 468)">
+    <rect x="420" y="126.00000000000001" width="360" height="684" rx="18" fill="#fff"/>
+    <svg x="438" y="144" width="324" height="648">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBDC9B"/>
+      <stop offset="0.55" stop-color="#F29A76"/>
+      <stop offset="1" stop-color="#E75A7C"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D77A6E"/>
+      <stop offset="1" stop-color="#7A4460"/>
+    </linearGradient>
+  </defs>
+  <rect width="324" height="401.76" fill="url(#sky)"/>
+  <circle cx="162" cy="362.88" r="58.32" fill="#FFF3D6" opacity="0.95"/>
+  <rect y="401.76" width="324" height="246.24" fill="url(#sea)"/>
+  <rect y="401.76" width="324" height="5.184" fill="#FFE9BF" opacity="0.7"/>
+  <ellipse cx="162" cy="434.15999999999997" rx="25.92" ry="3.888" fill="#FFE9BF" opacity="0.5"/>
+  <ellipse cx="162" cy="466.56" rx="42.120000000000005" ry="4.5360000000000005" fill="#FFE9BF" opacity="0.35"/>
+  <ellipse cx="38.879999999999995" cy="116.64" rx="29.16" ry="9.072000000000001" fill="#FFF3D6" opacity="0.45"/>
+  <ellipse cx="265.68" cy="168.48000000000002" rx="38.879999999999995" ry="10.368" fill="#FFF3D6" opacity="0.35"/>
+  <g transform="translate(162 563.76) scale(0.81 0.81)" fill="#3A2334" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g></svg>
+  </g><text x="1186" y="886" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="29" fill="#221D16" opacity="0.35">sample</text></svg>

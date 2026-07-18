@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1200" viewBox="0 0 960 1200">
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#39415C"/>
+      <stop offset="1" stop-color="#5E5678"/>
+    </linearGradient>
+    <linearGradient id="canal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E3550"/>
+      <stop offset="1" stop-color="#1E2436"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="840" fill="url(#dusk)"/>
+  <rect x="19.2" y="408.00000000000006" width="249.60000000000002" height="431.99999999999994" fill="#262C42"/>
+  <rect x="691.1999999999999" y="360" width="249.60000000000002" height="480" fill="#262C42"/>
+  <path d="M 19.2 408.00000000000006 h 249.60000000000002 l 28.799999999999997 -48 h -307.2 Z" fill="#191E30"/>
+  <path d="M 691.1999999999999 360 h 249.60000000000002 l 19.2 -48 h -288 Z" fill="#191E30"/>
+  <path d="M 192 840 q 288 -168.00000000000003 576 0" stroke="#191E30" stroke-width="24" fill="none"/>
+  <rect y="840" width="960" height="360" fill="url(#canal)"/>
+  
+    <circle cx="153.6" cy="504" r="26.4" fill="#F6B26B"/>
+    <circle cx="153.6" cy="504" r="50.16" fill="#F6B26B" opacity="0.18"/>
+    <circle cx="153.6" cy="1176" r="21.12" fill="#F6B26B" opacity="0.25"/>
+  
+    <circle cx="825.6" cy="456" r="26.4" fill="#F6B26B"/>
+    <circle cx="825.6" cy="456" r="50.16" fill="#F6B26B" opacity="0.18"/>
+    <circle cx="825.6" cy="1224" r="21.12" fill="#F6B26B" opacity="0.25"/>
+  
+    <circle cx="480" cy="600" r="21.599999999999998" fill="#F6B26B"/>
+    <circle cx="480" cy="600" r="41.03999999999999" fill="#F6B26B" opacity="0.18"/>
+    <circle cx="480" cy="1080" r="17.279999999999998" fill="#F6B26B" opacity="0.25"/>
+  <rect y="900" x="96" width="153.6" height="4.8" fill="#8A94B8" opacity="0.5"/>
+  <rect y="960" x="576" width="211.2" height="4.8" fill="#8A94B8" opacity="0.4"/>
+  <g transform="translate(480 765.6) scale(1.35 1.35)" fill="#131728" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g><text x="946" y="1186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#221D16" opacity="0.35">sample</text></svg>

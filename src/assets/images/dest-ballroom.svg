@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1200" viewBox="0 0 960 1200">
+  <defs>
+    <linearGradient id="hall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E241B"/>
+      <stop offset="1" stop-color="#5C4630"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6E5335"/>
+      <stop offset="1" stop-color="#3A2C1E"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="888" fill="url(#hall)"/>
+  <rect x="48" width="43.199999999999996" height="888" fill="#241C13"/>
+  <rect x="868.8000000000001" width="43.199999999999996" height="888" fill="#241C13"/>
+  <path d="M 268.8 120 q 211.2 144 422.4 0" stroke="#E9C87A" stroke-width="6" fill="none" opacity="0.9"/>
+  <circle cx="480" cy="120" r="14.4" fill="#F3DFA8"/>
+  <line x1="326.40000000000003" y1="156" x2="326.40000000000003" y2="216" stroke="#E9C87A" stroke-width="4.8" opacity="0.9"/><circle cx="326.40000000000003" cy="216" r="8.4" fill="#F3DFA8"/>
+  <line x1="403.2" y1="186" x2="403.2" y2="270" stroke="#E9C87A" stroke-width="4.8" opacity="0.9"/><circle cx="403.2" cy="270" r="8.4" fill="#F3DFA8"/>
+  <line x1="480" y1="195.6" x2="480" y2="291.6" stroke="#E9C87A" stroke-width="4.8" opacity="0.9"/><circle cx="480" cy="291.6" r="8.4" fill="#F3DFA8"/>
+  <line x1="556.8" y1="186" x2="556.8" y2="270" stroke="#E9C87A" stroke-width="4.8" opacity="0.9"/><circle cx="556.8" cy="270" r="8.4" fill="#F3DFA8"/>
+  <line x1="633.6" y1="156" x2="633.6" y2="216" stroke="#E9C87A" stroke-width="4.8" opacity="0.9"/><circle cx="633.6" cy="216" r="8.4" fill="#F3DFA8"/>
+  <rect y="888" width="960" height="312" fill="url(#floor)"/>
+  <ellipse cx="480" cy="984" rx="288" ry="36" fill="#E9C87A" opacity="0.12"/>
+  <g transform="translate(480 948) scale(1.5 1.5)" fill="#171009" opacity="1">
+    <circle cx="0" cy="-150" r="24"/>
+    <path d="M -4 -126 C -14 -122, -18 -110, -19 -95 L -14 -60 C -30 -20, -52 60, -66 96 C -30 112, 30 112, 66 96 C 52 60, 30 -20, 14 -60 L 19 -95 C 18 -110, 14 -122, 4 -126 Z"/>
+    <path d="M 16 -112 C 44 -96, 52 -40, 44 30 C 40 60, 34 80, 28 92 L 20 88 C 30 40, 34 -30, 12 -100 Z" opacity="0.35"/>
+  </g><text x="946" y="1186" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="23" fill="#221D16" opacity="0.35">sample</text></svg>

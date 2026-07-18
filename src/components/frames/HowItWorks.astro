@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets';
+import { copy } from '../../content/copy';
+import { images } from '../../content/images';
+import RibbonLine from '../shared/RibbonLine.astro';
+---
+
+<section class="section how" id="how">
+  <div class="section-inner">
+    <h2 class="visually-hidden">{copy.howItWorks.header}</h2>
+    <div class="steps">
+      <RibbonLine variant="thread" class="thread" />
+      {
+        copy.howItWorks.steps.map((step, i) => (
+          <article class="card step" data-reveal style={`--d: ${i * 150}ms;`}>
+            <span class="marker" aria-hidden="true">
+              {i + 1}
+            </span>
+            <Image src={images.steps[i].src} alt={images.steps[i].alt} loading="lazy" widths={[600, 1200]} sizes="(min-width: 900px) 360px, 90vw" />
+            <div class="step-copy">
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .steps {
+    position: relative;
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .thread {
+    display: none;
+  }
+
+  .step {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  .marker {
+    position: absolute;
+    top: var(--space-2);
+    left: var(--space-2);
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--peony);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .step-copy {
+    padding: var(--space-2) var(--space-3) var(--space-3);
+  }
+
+  .step-copy p {
+    margin-top: var(--space-1);
+  }
+
+  @media (min-width: 900px) {
+    .steps {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+
+    .thread {
+      display: block;
+      position: absolute;
+      top: 30%;
+      left: -2%;
+      width: 104%;
+      z-index: -1;
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+// The silk-ribbon signature element (PRD §5). One continuous peony stroke,
+// drawn on with stroke-dashoffset when .is-drawn lands (see motion.ts).
+interface Props {
+  variant: 'hero-arrow' | 'thread' | 'underline';
+  class?: string;
+}
+
+const { variant, class: className } = Astro.props;
+
+const paths = {
+  // Curls from the input photo toward the render stack, ends in an arrowhead flick
+  'hero-arrow': {
+    viewBox: '0 0 200 120',
+    d: 'M10 20 C 40 90, 90 100, 130 70 S 175 40, 185 55 M170 45 L 186 54 L 178 70',
+  },
+  // Gentle wave threading behind the three how-it-works cards
+  thread: {
+    viewBox: '0 0 1200 100',
+    d: 'M0 60 C 150 10, 300 90, 450 50 S 750 20, 900 60 S 1150 80, 1200 40',
+  },
+  // Loose underline swash beneath the gallery header
+  underline: {
+    viewBox: '0 0 400 40',
+    d: 'M8 25 C 100 8, 300 35, 392 15',
+  },
+};
+
+const { viewBox, d } = paths[variant];
+---
+
+<svg
+  class:list={['ribbon', `ribbon--${variant}`, className]}
+  viewBox={viewBox}
+  fill="none"
+  aria-hidden="true"
+  data-ribbon
+  preserveAspectRatio="xMidYMid meet"
+>
+  <path
+    d={d}
+    pathLength="1"
+    stroke="var(--peony)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    vector-effect="non-scaling-stroke"></path>
+</svg>

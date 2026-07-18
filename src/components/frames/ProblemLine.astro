@@ -1,0 +1,26 @@
+---
+import { copy } from '../../content/copy';
+---
+
+<section class="section problem">
+  <div class="section-inner">
+    <p class="line">{copy.problem.line}</p>
+  </div>
+</section>
+
+<style>
+  .problem {
+    padding-block: var(--space-6);
+  }
+
+  .line {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-3);
+    line-height: 1.15;
+    text-wrap: balance;
+    max-width: 24ch;
+    margin-inline: auto;
+    text-align: center;
+  }
+</style>

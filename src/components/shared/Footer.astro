@@ -1,0 +1,39 @@
+---
+import { copy } from '../../content/copy';
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="wordmark">{copy.footer.wordmark}</span>
+    <a href={copy.footer.instagram} aria-label="Instagram">Instagram</a>
+    <p class="trust">{copy.footer.trust}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid rgba(34, 29, 22, 0.12);
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .footer-inner {
+    max-width: var(--content-width);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .wordmark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-1);
+  }
+
+  .trust {
+    flex-basis: 100%;
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+</style>

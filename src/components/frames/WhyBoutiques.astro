@@ -1,0 +1,60 @@
+---
+import { copy } from '../../content/copy';
+
+// PRD: ship with real proof or ship without the strip; never fake it.
+// Flip to true once a real testimonial and boutique list exist.
+const SHOW_PROOF = false;
+---
+
+<section class="section why">
+  <div class="section-inner">
+    <h2>{copy.why.header}</h2>
+    <div class="cards">
+      {
+        copy.why.cards.map((card, i) => (
+          <article class="card why-card" data-reveal style={`--d: ${i * 150}ms;`}>
+            <h3>{card.title}</h3>
+            <p>{card.body}</p>
+          </article>
+        ))
+      }
+    </div>
+    {
+      SHOW_PROOF && (
+        <div class="proof">
+          <blockquote>[Pilot boutique testimonial]</blockquote>
+          <p>Trusted by boutiques in Singapore</p>
+        </div>
+      )
+    }
+    <p class="pricing">{copy.why.pricing}</p>
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+
+  .why-card {
+    padding: var(--space-3);
+  }
+
+  .why-card p {
+    margin-top: var(--space-1);
+  }
+
+  .pricing {
+    margin-top: var(--space-4);
+    font-size: var(--step-1);
+    max-width: 44ch;
+  }
+
+  @media (min-width: 900px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

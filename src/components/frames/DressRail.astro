@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import { copy } from '../../content/copy';
+import { images } from '../../content/images';
+
+const SELECTED_INDEX = 1;
+---
+
+<section class="section dresses">
+  <div class="section-inner">
+    <h2>{copy.dresses.header}</h2>
+    <p class="sub">{copy.dresses.sub}</p>
+  </div>
+  <div class="rail" role="list">
+    {
+      images.dresses.map((dress, i) => (
+        <figure class:list={['card', 'dress-card', { selected: i === SELECTED_INDEX }]} role="listitem" tabindex="0">
+          <Image src={dress.src} alt={dress.alt} loading="lazy" widths={[400, 800]} sizes="(min-width: 900px) 240px, 55vw" />
+          {i === SELECTED_INDEX && <span class="chip chip--gold selected-chip">Selected</span>}
+          <span class="chip detail-chip">{copy.dresses.details[i]}</span>
+        </figure>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .sub {
+    margin-top: var(--space-1);
+    max-width: 44ch;
+  }
+
+  .rail {
+    display: flex;
+    gap: var(--space-3);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: var(--space-3) var(--space-3) var(--space-4);
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+
+  .dress-card {
+    position: relative;
+    flex: 0 0 clamp(180px, 55vw, 240px);
+    scroll-snap-align: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  .dress-card.selected {
+    outline: 3px solid var(--gold);
+    outline-offset: -3px;
+  }
+
+  .selected-chip {
+    position: absolute;
+    top: var(--space-1);
+    right: var(--space-1);
+  }
+
+  .detail-chip {
+    position: absolute;
+    bottom: var(--space-1);
+    left: var(--space-1);
+    opacity: 0;
+    transition: opacity 200ms ease;
+  }
+
+  .dress-card:hover .detail-chip,
+  .dress-card:focus-visible .detail-chip,
+  .dress-card.selected .detail-chip {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .detail-chip {
+      opacity: 1;
+      transition: none;
+    }
+  }
+</style>

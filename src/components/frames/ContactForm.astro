@@ -1,0 +1,153 @@
+---
+import { copy } from '../../content/copy';
+
+const formspreeId = import.meta.env.PUBLIC_FORMSPREE_ID ?? 'REPLACE_ME';
+const action = `https://formspree.io/f/${formspreeId}`;
+const { fields, errors } = copy.contact;
+---
+
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <h2>{copy.contact.header}</h2>
+
+    <form method="POST" action={action} novalidate>
+      <div class="field">
+        <label for="f-name">{fields.name}</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required data-error={errors.name} />
+        <p class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="f-boutique">{fields.boutique}</label>
+        <input id="f-boutique" name="boutique" type="text" autocomplete="organization" required data-error={errors.boutique} />
+        <p class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="f-email">{fields.email}</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required data-error={errors.email} />
+        <p class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="f-city">{fields.city}</label>
+        <input id="f-city" name="city" type="text" autocomplete="address-level2" required data-error={errors.city} />
+        <p class="field-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="f-message">{fields.message}</label>
+        <textarea id="f-message" name="message" rows="4"></textarea>
+      </div>
+
+      <div class="visually-hidden" aria-hidden="true">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <p class="form-error" role="alert" hidden>{errors.submit}</p>
+      <button type="submit" class="btn-primary">{copy.contact.button}</button>
+    </form>
+
+    <p class="success" role="status" hidden>{copy.contact.success}</p>
+  </div>
+</section>
+
+<script>
+  const section = document.getElementById('contact')!;
+  const form = section.querySelector('form')!;
+  const successEl = section.querySelector<HTMLElement>('.success')!;
+  const formErrorEl = form.querySelector<HTMLElement>('.form-error')!;
+
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateField(input: HTMLInputElement): boolean {
+    const errorEl = input.parentElement!.querySelector<HTMLElement>('.field-error');
+    if (!errorEl) return true;
+    const value = input.value.trim();
+    const invalid = input.required && (value === '' || (input.type === 'email' && !EMAIL_RE.test(value)));
+    errorEl.textContent = invalid ? (input.dataset.error ?? '') : '';
+    errorEl.hidden = !invalid;
+    input.setAttribute('aria-invalid', String(invalid));
+    return !invalid;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    formErrorEl.hidden = true;
+
+    const inputs = [...form.querySelectorAll<HTMLInputElement>('input[required]')];
+    const firstInvalid = inputs.filter((input) => !validateField(input))[0];
+    if (firstInvalid) {
+      firstInvalid.focus();
+      return;
+    }
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+      form.hidden = true;
+      successEl.hidden = false;
+      window.plausible?.('form_submit');
+    } catch {
+      formErrorEl.hidden = false;
+    }
+  });
+</script>
+
+<style>
+  form {
+    margin-top: var(--space-4);
+    max-width: 28rem;
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .field {
+    display: grid;
+    gap: 0.4rem;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    font: inherit;
+    color: inherit;
+    background: #fff;
+    border: 1.5px solid rgba(34, 29, 22, 0.3);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.8rem;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--peony);
+    outline-offset: 1px;
+  }
+
+  input[aria-invalid='true'] {
+    border-color: var(--peony);
+  }
+
+  .field-error,
+  .form-error {
+    color: #b3123f;
+    font-size: 0.9rem;
+  }
+
+  button {
+    justify-self: start;
+  }
+
+  .success {
+    margin-top: var(--space-4);
+    font-size: var(--step-1);
+    font-weight: 600;
+  }
+</style>
